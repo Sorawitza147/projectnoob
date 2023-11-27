@@ -30,7 +30,7 @@ if (isset($_POST['signup'])) {
         $result = $conn->query($sql);
 
         if ($result) {
-            echo "Signup successful. <a href='/project/Login/login.php'>Login</a>";
+            echo "<script>alert('การสมัครสมาชิกเสร็จสมบูรณ์'); window.location.href='/project/Login/login.php';</script>";
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
