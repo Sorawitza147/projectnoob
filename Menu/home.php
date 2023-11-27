@@ -12,18 +12,19 @@ session_start();
 </head>
   <style>
     .animated-text::after {
-    content: "|";
-    animation: blink-caret 0.75s infinite alternate;
-}
+        content: "|";
+        animation: blink-caret 0.75s infinite alternate;
+        }
 
-@keyframes blink-caret {
-    from, to {
-        color: transparent;
-    }
-    50% {
-        color: #fff;
-    }
-}   
+        @keyframes blink-caret {
+        from, to {
+            color: transparent;
+        }
+        50% {
+            color: #fff;
+       }
+    }   
+
   </style>
 <body>
     <header class="p-3 text-bg-dark">
@@ -72,7 +73,7 @@ session_start();
     </baby>
 
     <script src="../js/bootstrap.min.js"></script>
-    <script src="../time.js"></script>
-    <script src="../gpt.js"></script>       
+    <script src="time.js"></script>
+    <script src="gpt.js"></script>       
 </body>
 </html>
