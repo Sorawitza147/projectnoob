@@ -1,0 +1,31 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa; /* สีพื้นหลัง */
+}
+
+header {
+    background-color: #343a40; /* สี header */
+    color: #fff; /* สีข้อความใน header */
+}
+
+.nav-link {
+    color: #fff !important; /* สีข้อความลิงค์ใน navbar */
+}
+
+.container-lg {
+    margin-top: 20px; /* ระยะห่างด้านบนของ container-lg */
+}
+
+.gallery-item {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* มุมขอบรูปใน gallery */
+    cursor: pointer;
+}
+
+/* เพิ่มเส้นข้างล่างให้กับ navbar */
+.navbar::after {
+    content: '';
+    display: block;
+    clear: both;
+}

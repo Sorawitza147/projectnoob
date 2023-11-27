@@ -22,11 +22,11 @@ if (isset($_POST['login'])) {
     if ($result) {
         if ($result->num_rows > 0) {
             // User exists, redirect to home.php
-            header("Location: home.php");
+            header("Location: ../home.php");
             exit();
         } else {
             // User doesn't exist
-            echo "ไม่พบผู้ใช้กรุณาสมัคร<a href='signup.php'>signup</a> first.";
+            echo "ไม่พบผู้ใช้กรุณาสมัคร<a href='/project/Login/signup.php'>signup</a> first.";
         }
     } else {
         // Query execution error

@@ -1,9 +1,9 @@
 <?php
-include '../config.php';
+include '../Login/config.php';
 
 // Check if not logged in
 if (!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] !== true) {
-    echo "<script>alert('Please log in to access this page.'); window.location.href='../login.php';</script>";
+    echo "<script>alert('Please log in to access this page.'); window.location.href='../Login/login.php';</script>";
     exit();
 }
 ?>
@@ -48,26 +48,22 @@ if (!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] !== true) {
             </a>
     
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-            <li><a href="../home.php" class="nav-link px-2 text-secondary">Home</a></li>
-              <li><a href="../Certificate.php" class="nav-link px-2 text-white">Certificate</a></li>
-              <li><a href="../Contact.php" class="nav-link px-2 text-white">Contact</a></li>
-              <li><a href="../FAQ.php" class="nav-link px-2 text-white">FAQs</a></li>
+            <li><a href="../Menu/home.php" class="nav-link px-2 text-secondary">Home</a></li>
+              <li><a href="../Menu/Certificate.php" class="nav-link px-2 text-white">Certificate</a></li>
+              <li><a href="../Menu/Contact.php" class="nav-link px-2 text-white">Contact</a></li>
+              <li><a href="../Menu/FAQ.php" class="nav-link px-2 text-white">FAQs</a></li>
               <li><a href="../country/index.php" class="nav-link px-2 text-white">Search Country</a></li>
             </ul>
           </div>
-            
-            <form class="col-2 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-              <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
-            </form>
     
             <div class="text-end">
               <?php
               if (isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] === true) {
                 echo "<span class='text-white me-2'>ยินดีต้อนรับคุณ: " . $_SESSION["Username"] . "</span>";
-                echo "<a button type='button'  href='../logout.php' class='btn btn-outline-light me-2'>Logout</a></button>";
+                echo "<a button type='button'  href='../Login/logout.php' class='btn btn-outline-light me-2'>Logout</a></button>";
             } else {
-                echo "<a button type='button'  href='../login.php' class='btn btn-outline-light me-2'>Login</a></button>";
-                echo "<a button type='button'  href='../signup.php' class='btn btn-warning'>Sign up</a></button>";
+                echo "<a button type='button'  href='../Login/login.php' class='btn btn-outline-light me-2'>Login</a></button>";
+                echo "<a button type='button'  href='../Login/signup.php' class='btn btn-warning'>Sign up</a></button>";
             }            
               ?>
             </div>

@@ -1,5 +1,5 @@
 <?php
-include 'config.php';
+include '/project/Login/config.php';
 
 if (isset($_POST['signup'])) {
     $fullname = $_POST['fullname'];

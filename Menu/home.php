@@ -7,8 +7,8 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="time.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../time.css">
 </head>
   <style>
     .animated-text::after {
@@ -33,10 +33,10 @@ session_start();
             </a>
     
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-              <li><a href="home.php" class="nav-link px-2 text-secondary">Home</a></li>
-              <li><a href="Certificate.php" class="nav-link px-2 text-white">Certificate</a></li>
-              <li><a href="Contact.php" class="nav-link px-2 text-white">Contact</a></li>
-              <li><a href="FAQ.php" class="nav-link px-2 text-white">FAQs</a></li>
+              <li><a href="../Menu/home.php" class="nav-link px-2 text-secondary">Home</a></li>
+              <li><a href="../Menu/Certificate.php" class="nav-link px-2 text-white">Certificate</a></li>
+              <li><a href="../Menu/Contact.php" class="nav-link px-2 text-white">Contact</a></li>
+              <li><a href="../Menu/FAQ.php" class="nav-link px-2 text-white">FAQs</a></li>
               <li><a href="/project/country/index.php" class="nav-link px-2 text-white">search country</a></li>
             </ul>
             
@@ -50,10 +50,10 @@ session_start();
               // ตรวจสอบว่าล็อกอินแล้วหรือไม่
               if (isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] === true) {
                 echo "<span class='text-white me-2'>ยินดีต้อนรับคุณ: " . $_SESSION["Username"] . "</span>";
-                echo "<a button type='button'  href='logout.php' class='btn btn-outline-light me-2'>Logout</a></button>";
+                echo "<a button type='button'  href='/project/Login/logout.php' class='btn btn-outline-light me-2'>Logout</a></button>";
             } else {
-                echo "<a button type='button'  href='login.php' class='btn btn-outline-light me-2'>Login</a></button>";
-                echo "<a button type='button'  href='signup.php' class='btn btn-warning'>Sign up</a></button>";
+                echo "<a button type='button'  href='/project/Login/login.php' class='btn btn-outline-light me-2'>Login</a></button>";
+                echo "<a button type='button'  href='/project/Login/signup.php' class='btn btn-warning'>Sign up</a></button>";
             }            
               ?>
             </div>
@@ -71,8 +71,8 @@ session_start();
         </div>
     </baby>
 
-    <script src="js/bootstrap.min.js"></script>
-    <script src="time.js"></script>
-    <script src="gpt.js"></script>       
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../time.js"></script>
+    <script src="../gpt.js"></script>       
 </body>
 </html>

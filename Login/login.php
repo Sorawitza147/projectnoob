@@ -20,7 +20,7 @@ if (isset($_POST['login'])) {
             echo "ยินดีต้อนรับ, " . $_SESSION["Username"];
 
             // Redirect to home page after a delay (for demonstration purposes)
-            header("refresh:2.5;url=home.php");
+            header("refresh:2.5;url=../Menu/home.php");
             exit();
         } else {
             // Login failed
@@ -42,11 +42,12 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="../custom.css"/>
 </head>
 <body>
     <div class="container">
         <h2>Login</h2>
-        <form action="login.php" method="post">
+        <form action="/project/Login/login.php" method="post">
             <label for="username">Username:</label>
             <input type="text" name="username" required>
 
@@ -55,7 +56,7 @@ $conn->close();
 
             <button type="submit" name="login">Login</button>
         </form>
-        <p>ไม่มีบัญชีใช่หรือไม่? <a href="signup.php">Signup here</a></p>
+        <p>ไม่มีบัญชีใช่หรือไม่? <a href="/project/Login/signup.php">Signup here</a></p>
     </div>
 </body>
 </html>
