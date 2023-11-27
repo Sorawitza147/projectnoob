@@ -1,0 +1,68 @@
+@keyframes light {
+    0% { color: rgb(59, 58, 58); }
+    14% { color: rgb(70, 69, 68); }
+    28% { color: rgb(18, 18, 15); }
+    42% { color: rgb(23, 24, 23); }
+    57% { color: rgb(51, 51, 52); }
+    71% { color: rgb(15, 14, 16); }
+    85% { color: rgb(29, 28, 29); }
+    100% { color: rgb(16, 3, 3); }
+}
+@keyframes Day {
+    0% { color: rgb(255, 0, 0); }
+    14% { color: rgb(255, 165, 0); }
+    28% { color: rgb(255, 255, 0); }
+    42% { color: rgb(0, 128, 0); }
+    57% { color: rgb(0, 0, 255); }
+    71% { color: rgb(0, 0, 128); }
+    85% { color: rgb(128, 0, 128); }
+    100% { color: rgb(255, 192, 203); }
+}
+@keyframes night {
+    0% { color: rgb(194, 219, 198); }
+    14% { color: rgb(236, 198, 161); }
+    28% { color: rgb(189, 189, 172); }
+    42% { color: rgb(207, 210, 207); }
+    57% { color: rgb(229, 229, 255); }
+    71% { color: rgb(208, 220, 211); }
+    85% { color: rgb(241, 241, 241); }
+    100% { color: rgb(255, 251, 210); }
+}
+.baby {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.clock {
+    font-size: 350px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.light-mode {
+    background-image: url('img/istockphoto-1328689113-612x612.jpg'); /* ระบุเส้นทางของภาพพื้นหลังที่คุณต้องการใช้ */
+    background-size: cover; /* ปรับขนาดภาพให้ครอบคลุมพื้นที่ทั้งหน้าเว็บ */
+    background-repeat: no-repeat; /* ไม่ซ้ำภาพพื้นหลัง */
+    background-attachment: fixed; /* คงความถูกต้องของภาพพื้นหลังเมื่อหน้าเว็บเลื่อน */
+    animation: light 15s linear infinite;
+}
+.day-mode {
+    background-image: url('img/pngtree-cloudy-cloud-shape-rainy-background-dark-clouds-cover-the-ferocity-before-image_1009050.jpg'); /* ระบุเส้นทางของภาพพื้นหลังที่คุณต้องการใช้ */
+    background-size: cover; /* ปรับขนาดภาพให้ครอบคลุมพื้นที่ทั้งหน้าเว็บ */
+    background-repeat: no-repeat; /* ไม่ซ้ำภาพพื้นหลัง */
+    background-attachment: fixed; /* คงความถูกต้องของภาพพื้นหลังเมื่อหน้าเว็บเลื่อน */
+    animation: Day 15s linear infinite;
+}
+/* สีพื้นหลังมืดตอนกลางคืน */
+.dark-mode {
+    background-image: url('img/sharpenyourphoto_6.jpg'); /* ระบุเส้นทางของภาพพื้นหลังที่คุณต้องการใช้ */
+    background-size: cover; /* ปรับขนาดภาพให้ครอบคลุมพื้นที่ทั้งหน้าเว็บ */
+    background-repeat: no-repeat; /* ไม่ซ้ำภาพพื้นหลัง */
+    background-attachment: fixed; /* คงความถูกต้องของภาพพื้นหลังเมื่อหน้าเว็บเลื่อน */
+    animation: night 15s linear infinite;
+}
