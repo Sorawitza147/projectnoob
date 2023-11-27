@@ -66,4 +66,4 @@ if (!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] !== true) {
     <script src="js/bootstrap.min.js"></script>
     <script src="time.js"></script>
 </body>
-</html>
+</html>...
