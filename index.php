@@ -7,8 +7,8 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../time.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="time.css">
 </head>
   <style>
     .animated-text::after {
@@ -34,10 +34,10 @@ session_start();
             </a>
     
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-              <li><a href="../Menu/home.php" class="nav-link px-2 text-secondary">Home</a></li>
-              <li><a href="../Menu/Certificate.php" class="nav-link px-2 text-white">Certificate</a></li>
-              <li><a href="../Menu/Contact.php" class="nav-link px-2 text-white">Contact</a></li>
-              <li><a href="../Menu/FAQ.php" class="nav-link px-2 text-white">FAQs</a></li>
+              <li><a href="index.php" class="nav-link px-2 text-secondary">Home</a></li>
+              <li><a href="Menu/Certificate.php" class="nav-link px-2 text-white">Certificate</a></li>
+              <li><a href="Menu/Contact.php" class="nav-link px-2 text-white">Contact</a></li>
+              <li><a href="Menu/FAQ.php" class="nav-link px-2 text-white">FAQs</a></li>
               <li><a href="/project/country/index.php" class="nav-link px-2 text-white">search country</a></li>
             </ul>
             
@@ -72,7 +72,7 @@ session_start();
         </div>
     </baby>
 
-    <script src="../js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="time.js"></script>
     <script src="gpt.js"></script>       
 </body>

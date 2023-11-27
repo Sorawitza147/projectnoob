@@ -22,7 +22,7 @@ if (isset($_POST['login'])) {
     if ($result) {
         if ($result->num_rows > 0) {
             // User exists, redirect to home.php
-            header("Location: ../home.php");
+            header("Location: ../index.php");
             exit();
         } else {
             // User doesn't exist

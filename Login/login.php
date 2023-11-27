@@ -20,7 +20,7 @@ if (isset($_POST['login'])) {
             echo "ยินดีต้อนรับ, " . $_SESSION["Username"];
 
             // Redirect to home page after a delay (for demonstration purposes)
-            header("refresh:2.5;url=../Menu/home.php");
+            header("refresh:2.5;url=../index.php");
             exit();
         } else {
             // Login failed
