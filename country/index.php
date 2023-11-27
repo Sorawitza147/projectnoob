@@ -3,7 +3,7 @@ include '../config.php';
 
 // Check if not logged in
 if (!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] !== true) {
-    echo "<script>alert('Please log in to access this page.'); window.location.href='login.php';</script>";
+    echo "<script>alert('Please log in to access this page.'); window.location.href='../login.php';</script>";
     exit();
 }
 ?>
@@ -63,7 +63,7 @@ if (!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] !== true) {
             <div class="text-end">
               <?php
               if (isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] === true) {
-                echo "<span class='text-white me-2'>Welcome, " . $_SESSION["Username"] . "</span>";
+                echo "<span class='text-white me-2'>ยินดีต้อนรับคุณ: " . $_SESSION["Username"] . "</span>";
                 echo "<a button type='button'  href='../logout.php' class='btn btn-outline-light me-2'>Logout</a></button>";
             } else {
                 echo "<a button type='button'  href='../login.php' class='btn btn-outline-light me-2'>Login</a></button>";

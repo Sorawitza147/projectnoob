@@ -15,11 +15,16 @@ if (isset($_POST['login'])) {
             $row = $result->fetch_assoc();
             $_SESSION["logged_in"] = true;
             $_SESSION["Username"] = $row['Username'];
-            header("Location: home.php"); // Redirect to home page
+
+            // Show welcome message
+            echo "ยินดีต้อนรับ, " . $_SESSION["Username"];
+
+            // Redirect to home page after a delay (for demonstration purposes)
+            header("refresh:2.5;url=home.php");
             exit();
         } else {
             // Login failed
-            echo "Invalid Username or password.";
+            echo "ชื่อผู้ใช้หรือรหัสผ่านผิด";
         }
     } else {
         // Query error
@@ -50,7 +55,7 @@ $conn->close();
 
             <button type="submit" name="login">Login</button>
         </form>
-        <p>Don't have an account? <a href="signup.php">Signup here</a></p>
+        <p>ไม่มีบัญชีใช่หรือไม่? <a href="signup.php">Signup here</a></p>
     </div>
 </body>
 </html>

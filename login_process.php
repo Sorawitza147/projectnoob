@@ -26,7 +26,7 @@ if (isset($_POST['login'])) {
             exit();
         } else {
             // User doesn't exist
-            echo "User not found. Please <a href='signup.php'>signup</a> first.";
+            echo "ไม่พบผู้ใช้กรุณาสมัคร<a href='signup.php'>signup</a> first.";
         }
     } else {
         // Query execution error

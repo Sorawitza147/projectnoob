@@ -36,7 +36,7 @@ if (!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] !== true) {
                     <?php
                     // Check if logged in and show username
                     if (isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] === true) {
-                      echo "<span class='text-white me-2'>Welcome, " . $_SESSION["Username"] . "</span>";
+                      echo "<span class='text-white me-2'>ยินดีต้อนรับคุณ: " . $_SESSION["Username"] . "</span>";
                         echo "<a button type='button'  href='logout.php' class='btn btn-outline-light me-2'>Logout</a></button>";
                     } else {
                         echo "<a button type='button'  href='login.php' class='btn btn-outline-light me-2'>Login</a></button>";

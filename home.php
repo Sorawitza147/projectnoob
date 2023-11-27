@@ -1,11 +1,5 @@
 <?php
 session_start();
-
-// Check if not logged in
-if (!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] !== true) {
-    echo "<script>alert('Please log in to access this page.'); window.location.href='login.php';</script>";
-    exit();
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,8 +9,22 @@ if (!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] !== true) {
     <title>Home</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="time.css">
-    <link rel="stylesheet" href="gpt.css">
 </head>
+  <style>
+    .animated-text::after {
+    content: "|";
+    animation: blink-caret 0.75s infinite alternate;
+}
+
+@keyframes blink-caret {
+    from, to {
+        color: transparent;
+    }
+    50% {
+        color: #fff;
+    }
+}   
+  </style>
 <body>
     <header class="p-3 text-bg-dark">
         <div class="container">
@@ -41,7 +49,7 @@ if (!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] !== true) {
               // session_start(); // ไม่ต้อง start session ซ้ำ
               // ตรวจสอบว่าล็อกอินแล้วหรือไม่
               if (isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] === true) {
-                echo "<span class='text-white me-2'>Welcome, " . $_SESSION["Username"] . "</span>";
+                echo "<span class='text-white me-2'>ยินดีต้อนรับคุณ: " . $_SESSION["Username"] . "</span>";
                 echo "<a button type='button'  href='logout.php' class='btn btn-outline-light me-2'>Logout</a></button>";
             } else {
                 echo "<a button type='button'  href='login.php' class='btn btn-outline-light me-2'>Login</a></button>";
@@ -59,11 +67,12 @@ if (!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] !== true) {
         </div>
         
         <div class="gpt">
-            <h2><center><p>This is the work of ChatGPT</p></center></h2>
+        <center><p><h1 class='animated-text'>This is the work of ChatGPT</h1></p></center>";
         </div>
     </baby>
 
     <script src="js/bootstrap.min.js"></script>
     <script src="time.js"></script>
+    <script src="gpt.js"></script>       
 </body>
 </html>

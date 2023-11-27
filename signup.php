@@ -46,7 +46,7 @@ $conn->close();
 
             <button type="submit" name="signup">Signup</button>
         </form>
-        <p>Already have an account? <a href="login.php">Login here</a></p>
+        <p>คุณมีบัญชีแล้ว? <a href="login.php">Login here</a></p>
     </div>
 </body>
 </html>
